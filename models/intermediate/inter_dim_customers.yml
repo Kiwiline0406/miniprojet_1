@@ -1,0 +1,12 @@
+version: 2
+
+models:
+    - name: inter_dim_customers
+      description: Customer data with rank depending on the count of orders, one row per customer.
+      columns:
+        - name: customer_id
+          description: The unique key for each customer (integer)
+        - name: customer_name
+          description: The full name of the customer (string).
+        - name: customer_status
+          description: The rank of each customers based on its orders count (string).

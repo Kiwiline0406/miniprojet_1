@@ -1,0 +1,26 @@
+version: 2
+
+models:
+    - name: stg_supplies
+      description: Supply data with basic cleaning and transformation applied, one row per supply.
+      columns:
+        - name: supply_id
+          description: The key for each supply (integer).
+          tests:
+            - not_null
+        - name: supply_name
+          description: The full name for each supply (string)
+          tests:
+            - not_null
+        - name: supply_cost
+          description: The cost of each product (decimal)
+          tests:
+            - not_null
+        - name: perishable
+          description: The characteristic of whether or not the supply is perishable, for each supply (boolean).
+          tests:
+            - not_null
+        - name: sku
+          description: The stock keeping unit's code for each product (string).
+          tests:
+            - not_null

@@ -1,0 +1,14 @@
+version: 2
+
+models:
+    - name: dim_stores
+      description: Store data with basic cleaning and transformation applied, one row per store.
+      columns:
+        - name: store_id
+          description: The unique key for each store (integer).
+        - name: store_name
+          description: The full name for each store (string)
+        - name: opened_date
+          description: The date of opening of each store (timestamp)
+        - name: tax_rate
+          description: The tax rate applied by each store (decimal).

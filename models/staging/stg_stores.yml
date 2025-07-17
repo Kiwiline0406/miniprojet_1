@@ -1,0 +1,23 @@
+version: 2
+
+models:
+    - name: stg_stores
+      description: Store data with basic cleaning and transformation applied, one row per store.
+      columns:
+        - name: store_id
+          description: The unique key for each store (integer).
+          tests:
+            - not_null
+            - unique
+        - name: store_name
+          description: The full name for each store (string)
+          tests:
+            - not_null
+        - name: opened_date
+          description: The date of opening of each store (timestamp)
+          tests:
+            - not_null
+        - name: tax_rate
+          description: The tax rate applied by each store (decimal).
+          tests:
+            - not_null

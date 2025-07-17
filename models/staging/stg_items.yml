@@ -1,0 +1,19 @@
+version: 2
+
+models:
+    - name: stg_items
+      description: Item data with basic cleaning and transformation applied, one row per item.
+      columns:
+        - name: item_id
+          description: The unique key for each item (integer).
+          tests:
+            - not_null
+            - unique
+        - name: order_id
+          description: The unique key for each order (integer)
+          tests:
+            - not_null
+        - name: sku
+          description: The stock keeping unit's code for each item (string)
+          tests:
+            - not_null

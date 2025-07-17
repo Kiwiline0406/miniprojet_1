@@ -1,0 +1,33 @@
+version: 2
+
+models:
+    - name: fact_orders_items
+      description: This is a table with all the facts regarding the orders. There is one row per fact.
+      columns:
+        - name: fact_id
+          description: The unique key for each fact (integer).
+          tests:
+            - not_null
+            - unique
+        - name: order_id
+          description: The unique key for each order (integer).
+        - name: customer_id
+          description: The unique key for each customer (integer).
+        - name: store_id
+          description: The unique key for each store (integer).
+        - name: order_date
+          description: The date for each order (timestamp).
+        - name: product_sku
+          description: The stock keeping unit's code for each product (string).
+          tests: 
+            - relationships:
+                to: ref('dim_products_supplies')
+                field: product_sku
+        - name: quantity
+          description: The quantity of each product of an order (integer).
+        - name: subtotal
+          description: The amount for each product of an order, depending of the quantity ordered in the order (decimal).
+        - name: tax_paid
+          description: The amount of the tax paid for each product of an order (decimal).
+        - name: total_amount
+          description: The total amount for each product of an order (decimal).

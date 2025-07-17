@@ -1,0 +1,26 @@
+version: 2
+
+models:
+    - name: inter_stores_customers_orders
+      description: This is an intermediate view for creating the fact table, starting with joining 3 views (items, orders and products). There is one row per fact.
+      columns:
+        - name: fact_id
+          description: The unique key for each fact (integer).
+        - name: order_id
+          description: The unique key for each order (integer).
+        - name: customer_id
+          description: The unique key for each customer (integer).
+        - name: store_id
+          description: The unique key for each store (integer).
+        - name: product_sku
+          description: The stock keeping unit's code for each product (string).
+        - name: order_date
+          description: The date for each order (timestamp).
+        - name: quantity
+          description: The quantity of each product of an order (integer).
+        - name: subtotal
+          description: The amount for each product of an order, depending of the quantity ordered in the order (decimal).
+        - name: tax_paid
+          description: The amount of the tax paid for each product of an order (decimal).
+        - name: total_amount
+          description: The total amount for each product of an order (decimal).

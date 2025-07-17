@@ -1,0 +1,23 @@
+version: 2
+
+models:
+    - name: stg_orders
+      description: Order data with basic cleaning and transformation applied, one row per order.
+      columns:
+        - name: order_id
+          description: The unique key for each order (integer).
+          tests:
+            - not_null
+            - unique
+        - name: customer_id
+          description: The unique key for each customer (integer)
+          tests:
+            - not_null
+        - name: order_date
+          description: The date for each order (timestamp)
+          tests:
+            - not_null
+        - name: store_id
+          description: The unique key for each store (integer).
+          tests:
+            - not_null

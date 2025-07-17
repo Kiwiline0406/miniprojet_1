@@ -1,0 +1,27 @@
+version: 2
+
+models:
+    - name: stg_products
+      description: Product data with basic cleaning and transformation applied, one row per product.
+      columns:
+        - name: product_sku
+          description: The stock keeping unit's code for each product (string).
+          tests:
+            - not_null
+            - unique
+        - name: product_name
+          description: The full name for each product (string)
+          tests:
+            - not_null
+        - name: product_type
+          description: The type for each product (string)
+          tests:
+            - not_null
+        - name: product_price
+          description: The price for each product (decimal).
+          tests:
+            - not_null
+        - name: product_description
+          description: The description of each product (text).
+          tests:
+            - not_null

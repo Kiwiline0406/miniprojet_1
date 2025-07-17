@@ -1,0 +1,24 @@
+version: 2
+
+models:
+    - name: inter_products_supplies
+      description: This is an intermediate view for creating the dim table products-items. There is one row per prod-supply id.
+      columns:
+        - name: prod_supply_id
+          description: The unique key for each combinaison of item_id and sku (string)
+        - name: product_sku
+          description: The stock keeping unit's code for each product (string).
+        - name: product_name
+          description: The full name for each product (string).
+        - name: product_type
+          description: The type for each product (string).
+        - name: product_price
+          description: The price for each product (decimal).
+        - name: product_description
+          description: The description for each product (text).
+        - name: supply_name
+          description: The full name for each supply (string).
+        - name: supply_cost
+          description: The cost of each supply (decimal).
+        - name: perishable
+          description: The quality of the supply in temrs of perishability (boolean).

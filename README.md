@@ -7,8 +7,11 @@ Le projet se concentre sur l’utilisation de DBT (Data Build Tool) pour orchest
 ## Objectifs 
 
 ✅ Modélisation des données : Concevoir un schéma physique du jeu de données brut et le dénormaliser pour répondre aux besoins analytiques.
+
 ✅ Intégration des données dans Redshift : Mettre en place un entrepôt de données sur Amazon Redshift et créer un cluster Redshift Serverless.
+
 ✅ Transformation des données avec DBT : Utiliser DBT pour orchestrer les transformations nécessaires et structurer les données pour l’analyse.
+
 ✅ Identification de KPI et requêtes analytiques : Définir quelques indicateurs clés de performance (KPI) avec Power BI
 
 ### Ressources

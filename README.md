@@ -14,7 +14,7 @@ Le projet se concentre sur l’utilisation de DBT (Data Build Tool) pour orchest
 
 ✅ Identification de KPI et requêtes analytiques : Définir quelques indicateurs clés de performance (KPI) avec Power BI
 
-### Ressources
+## Ressources
 
 lien du jeu de données ici : https://github.com/dsteddy/jaffle_shop_data
 

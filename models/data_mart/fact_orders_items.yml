@@ -2,7 +2,7 @@ version: 2
 
 models:
     - name: fact_orders_items
-      description: This is a table with all the facts regarding the orders. There is one row per fact.
+      description: This is a table with all the facts regarding the orders. There is one row per fact which is a combination of the order_id key and the product_sku key. So there is one row per product in an order.
       columns:
         - name: fact_id
           description: The unique key for each fact (integer).

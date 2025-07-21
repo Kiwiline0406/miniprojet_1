@@ -2,7 +2,7 @@ version: 2
 
 models:
     - name: dim_products_supplies
-      description: The dimension table Customer data with basic cleaning and transformation applied, one row per customer.
+      description: The dimension table with products and supplies data. There is one row per supply from each product.
       columns:
         - name: prod_supply_id
           description: The unique key for each combination of each supply per product (string)
